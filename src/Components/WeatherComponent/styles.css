@@ -1,0 +1,24 @@
+.Weather-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Weather-container.Day{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #10a4e8, #6167f1);
+}
+
+.weather-card{
+    text-align: center;
+}
+
+.cidade-estado{
+    font-size: 20px;
+}
