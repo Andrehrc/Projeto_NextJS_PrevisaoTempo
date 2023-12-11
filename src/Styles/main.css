@@ -1,11 +1,11 @@
-.Dia{
+.Weather-container:has(.weather-card .time-saudacao-container.Dia) {
     background: linear-gradient(90deg, #10a4e8, #6167f1);
 }
 
-.Tarde{
+.Weather-container:has(.weather-card .time-saudacao-container.Tarde) {
     background: linear-gradient(90deg, #ff8a37, #691e00);
 }
 
-.Noite {
+.Weather-container:has(.weather-card .time-saudacao-container.Noite) {
     background: linear-gradient(90deg, #373737, #000000);
 }

@@ -30,22 +30,35 @@ export const DayOfWeekAndTime = () => {
         return () => clearInterval(intervalId);
     }, []);
 
+    function cumprimentoDoDia() {
+        const horaAtual = new Date().getHours();
+      
+        if (horaAtual >= 6 && horaAtual < 12) {
+          return 'Dia';
+        } else if (horaAtual >= 12 && horaAtual < 18) {
+          return 'Tarde';
+        } else {
+          return 'Noite';
+        }
+      }
+
+    const periodoDoDia = cumprimentoDoDia();
     const formattedHour = hour < 10 ? `0${hour}` : `${hour}`;
     const formattedMinute = minute < 10 ? `0${minute}` : `${minute}`;
 
     return (
-        <div className='time-saudacao-container'>
+        <div className={`${periodoDoDia} time-saudacao-container`} >
             <h3 className='font-bold time'>{formattedHour}:{formattedMinute}</h3>
 
-            {(hour >= 6 && hour < 12) &&
+            {periodoDoDia == 'Dia' &&
                 <h3 id='saudacao' className='saudacao'>Bom dia!</h3>
             }
 
-            {(hour >= 12 && hour < 18) &&
+            {periodoDoDia == 'Tarde' &&
                 <h3 id='saudacao' className='saudacao'>Boa tarde!</h3>
             }
 
-            {(hour >= 18 || hour < 6) &&
+            {periodoDoDia == 'Noite' &&
                 <h3 id='saudacao' className='saudacao'>Boa noite!</h3>
             }
 
