@@ -35,7 +35,7 @@ export const WeatherComponent: React.FC = () => {
 
     const obterPrevisaoTempo = async (latitude: number, longitude: number) => {
       try {
-        const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
+        const apiKey = process.env.NEXT_PUBLIC_REACT_APP_OPENWEATHERMAP_API_KEY;
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt_br&units=metric&appid=${apiKey}`;
 
 
